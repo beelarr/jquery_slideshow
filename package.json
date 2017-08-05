@@ -1,0 +1,9 @@
+{
+  "name": "jq_slideshow",
+  "version": "0.0.1",
+  "dependencies": {
+    "flickrapi": "^0.6.0",
+    "minimatch": "^3.0.4",
+    "uuid": "^3.1.0"
+  }
+}
