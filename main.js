@@ -1,12 +1,30 @@
-$("button").on("click", handleButtonClick);
+$().ready(handleButtonClick);
 
 function jsonFlickrFeed(json) {
-    console.log(json);
+    // console.log(json);
 
     $.each(json.items, function(i, item) {
-        $("<img />").attr("src", item.media.m).appendTo("#images");
-    });
-};
+        console.log(json.items)
+        // console.log(i)
+        console.log(item)
+        let title = item.title.split(',', 1).pop()
+            console.log(title)
+
+
+        let images = `<img src="${item.media.m}" alt="${item.title}">
+             <div class="carousel-caption">
+                <h3>${title}</h3>
+                <!--<p></p>-->
+              </div>`
+
+            $('#images').html(images)
+        })
+
+
+}
+
+        // $("<img />").attr("src", item.media.m).appendTo(".carousel-inner");
+
 
 function handleButtonClick() {
     $("button").remove();
