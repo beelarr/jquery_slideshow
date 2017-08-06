@@ -14,6 +14,6 @@ function handleButtonClick() {
     $.ajax({
         url: 'https://api.flickr.com/services/feeds/photos_public.gne',
         dataType: 'jsonp',
-        data: { "tags": "lewis,hines,child,labor",  "format": "json" }
+        data: { "id": "8623220@N02", "tags": "child labor, labor", "format": "json" }
     });
 }
